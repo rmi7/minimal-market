@@ -51,6 +51,8 @@ All user roles can view all pages: Owner(s), Store(s), Products(s).
 - only a few contract events are currently listened for in the ui, so the updating of the ui might not happen as expected, a hard refresh of the page should get you to the correct state.
 - does not keep track of transaction that are `sent` vs `mined`, this will be needed when using on mainnet/testnet to keep the user happy
 
+**creating stores/storeowners/products + purchasing products works!**
+
 ## Requirements
 
 - `truffle` (tested using `v4.1.14`)
@@ -87,9 +89,13 @@ ganache-cli -d
 
 There is a `truffle` script inside `scripts/` which will seed the app with "real" demo data.
 - It will retrieve random images and store/product names using [`faker`](https://github.com/Marak/Faker.js).
-- It will **Upload** (and **pin**) all data to ipfs
-- It will add stores and products to deployed smart contracts
+- It will generate random text using [`lorem-ipsum`](https://www.npmjs.com/package/lorem-ipsum).
+- It will **Upload** (and **pin**) all images, store-/productcontent objects to ipfs
+- It will create some store owners.
+- It will create some stores for each store owner.
+- It will create some random products in each store.
 - It makes use of the `ganache-cli` provided accounts (add them to your MetaMask)
+  with the layout as shown below
   - `accounts[0] = owner of all contracts + the only admin`
   - `accounts[1] = first storeowner`
   - `accounts[2] = second storeowner`
