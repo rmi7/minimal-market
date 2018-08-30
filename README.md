@@ -126,6 +126,8 @@ There is a `truffle` script inside `scripts/` which will seed the app with "real
 
 `truffle test`
 
+There is an overall explanation of the tests inside the [Avoiding Common Attacks](./avoiding_common_attacks.md) file: **Write Tests**
+
 ## Contract deployement on mainnet/testnet(s)
 
 Not yet implemented

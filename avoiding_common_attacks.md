@@ -20,6 +20,8 @@ The tests are grouped per function signature.
 
 The tests also contain features which are not yet implemented in the ui (emergency stop, update store/product).
 
+A more detailed explanation of what each test does can be seen from the test's name.
+
 ## 3. Make use of open-source solidity modules
 
 [`zeppelin-solidity`](https://github.com/OpenZeppelin/openzeppelin-solidity) (installed using `npm`).
